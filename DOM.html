@@ -4,16 +4,55 @@
         <title>DOm Examples</title>
     </head>
     <body>
-        <h1 id ="container">Welcome to DOM Examples</h1>
-        <p>This is a simple HTML document demonstrating 
+        <div class = "container">
+            <h1 id ="container">Welcome to DOM Examples</h1>
+            <p>This is a simple HTML document demonstrating 
             the Document Object Model (DOM). </p>
+        </div>
+
+        <div class = "container">
+            <h1 id ="second">Welcome to DOM Examples</h1>
+            <p>This is a simple HTML document demonstrating 
+            the Document Object Model (DOM). </p>
+        </div>
 
     <script>
         let heading = document.getElementById
         ("container");
         console.dir(heading);
         heading.innerHTML = "Dom example updated!";
-        //  also able to update this
+        //  also able to update this heading 
+   
+        
+        let content = document.getElementsByClassName 
+        ('title');
+        console.dir(content);
+        console.log(content);
+    
+    
+
+        let para  = document.getElementsByTagName
+        ("p");
+        console.dir(para);
+
+
+
+        let firstContainer = document.querySelector
+        (".container");
+        firstContainer.style.color = "blue";
+        // it will select first class named container
+       
+        let AllContainer = document.querySelectorAll
+        (".container");
+        console.dir(AllContainer);
+
+        
+        AllContainer.forEach (container => {
+            container.style.color =
+            "yellow";
+        });
+
+
     </script>
     </body>
 </html>
